@@ -57,6 +57,11 @@ function main() {
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
 
+
+    //biar hasilnya bener2 pesergi
+    gl.viewport(100, 0, gl.canvas.height, canvas.height)
+
+    //
     var primitive = gl.TRIANGLE_FAN;
     var offset = 0;
     var count = 4;
