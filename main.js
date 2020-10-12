@@ -8,10 +8,12 @@ function main() {
   /**
    * A (-0.5, 0.5); B (-0.5, -0.5); C (0.5, -0.5) D (0.5,0.5)-->ClipCoordinates
    */
-    var vertices = [-0.5, 0.5, //titikA
-         -0.5, -0.5,  //B
-         0.5, -0.5,    //C
-         0.5,0.5 //D
+    var vertices = [ -0.5, 0.5,       // Titik A 
+        -0.5, -0.5,     // Titik B
+        0.5, -0.5,      // Titik C
+        0.5, -0.5,      // Titik C
+        0.5, 0.5,       // Titik D
+        -0.5, 0.5       // Titik A 
          
         ]; 
     
@@ -62,9 +64,9 @@ function main() {
     gl.viewport(100, 0, gl.canvas.height, canvas.height)
 
     //
-    var primitive = gl.TRIANGLE_FAN;
+    var primitive = gl.TRIANGLES;
     var offset = 0;
-    var count = 4;
+    var count = 6;
 
     
     gl.drawArrays(primitive, offset, count);
