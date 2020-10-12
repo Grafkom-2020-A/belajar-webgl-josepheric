@@ -6,12 +6,13 @@ function main() {
 
      // Definisi verteks-verteks pada segitiga
   /**
-   * A (-0.5, 0.5); B (-0.5, -0.5); C (0.5, -0.5) -->ClipCoordinates
+   * A (-0.5, 0.5); B (-0.5, -0.5); C (0.5, -0.5) D (0.5,0.5)-->ClipCoordinates
    */
     var vertices = [-0.5, 0.5, //titikA
          -0.5, -0.5,  //B
-         0.5, -0.5,     //C
-         -0.5, 0.5, //titikA
+         0.5, -0.5,    //C
+         0.5,0.5 //D
+         
         ]; 
     
     var positionBuffer = gl.createBuffer();
@@ -56,7 +57,7 @@ function main() {
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
 
-    var primitive = gl.LINE_STRIP;
+    var primitive = gl.TRIANGLE_FAN;
     var offset = 0;
     var count = 4;
 
