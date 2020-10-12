@@ -10,10 +10,8 @@ function main() {
    */
     var vertices = [-0.5, 0.5, //titikA
          -0.5, -0.5,  //B
-         -0.5, -0.5,  //B
          0.5, -0.5,     //C
-         0.5, -0.5,     //C
-         -0.5, 0.5,]; //A
+        ]; 
     
     var positionBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer); //ngasih tau buffer GPU kita mau pake positionbuffer
@@ -57,9 +55,9 @@ function main() {
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
 
-    var primitive = gl.LINES;
+    var primitive = gl.LINE_LOOP;
     var offset = 0;
-    var count = 6;
+    var count = 3;
 
     
     gl.drawArrays(primitive, offset, count);
